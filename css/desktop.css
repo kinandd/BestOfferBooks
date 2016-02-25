@@ -166,6 +166,13 @@ nav ul li a:link {
     margin: 0 auto;
     border: solid thin black;
 }
+#related {
+    margin: 10px 10px 10px 0;
+    width: 300px;
+    height: 500px;
+    border: solid thin black;
+    float: right;
+}
 #right-ad {
     float: right;
     width: 200px;

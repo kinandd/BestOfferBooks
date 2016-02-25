@@ -1,0 +1,38 @@
+#product {
+    margin: 10px;
+    width: 560px;
+    border: solid thin black;
+    float: left;
+}
+.productImage {
+    float: left;
+	width: 250;
+}
+#bookTitle {
+	margin-bottom: 5px;
+}
+.productInfo {
+	float: left;
+	margin-left: 10px;
+}
+#label {
+	font-weight: bold;
+}
+#bookDescription{
+	margin: 10px;
+    width: 560px;
+    border: solid thin black;
+    float: left;
+}
+#bookDescription h1, #sellerNotes h1, #related h1{
+	margin: 10px;
+}
+#bookDescription p, #sellerNotes p, #related p{
+	margin: 10px;
+}
+#sellerNotes{
+	margin: 10px;
+    width: 560px;
+    border: solid thin black;
+    float: left;
+}
