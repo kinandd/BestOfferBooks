@@ -17,7 +17,7 @@
                 <img src="images/ad.png" width="728" height="90" alt="ad">
             </div>
         </div>
-        <div id="nav">
+        <nav>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Buy</a></li>
@@ -28,7 +28,7 @@
                 <li><form action="#"><input class="submit" type="submit" value="Log In"></form></li>
                 <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
             </ul>
-        </div>
+        </nav>
         <!-- MAIN CONTENT DIV HOLDS NEWS FEED AND RECENT LISTINGS -->
         <div id="main-content">
             <div id="left-content">
