@@ -188,40 +188,17 @@ nav ul li a:link {
 .group{
 	display: inline;
 }
-#matt{
-	border: 1px solid black;
+.about_profiles{
 	width: 20%;
 	float:left;
 	margin-right:2%;
 }
-#mikey{
-	
-	width: 20%;
-	float:left;
-	
-	margin-right:2%;
-}
-#christian{
-	
-	width: 20%;
-	float:left;
-	margin-right:2%;
-}
-#andrew{
-	
-	width: 20%;
-	float:left;
-	margin-right:2%;
-}
-h1,#matt{
+.about_profiles h1{
 	text-align:center;
 }
-h1,#mikey{
-	text-align:center;
-}
-h1,#christian{
-	text-align:center;
-}
-h1,#andrew{
-	text-align:center;
+.about_profiles img{
+	border-radius: 90px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
 }

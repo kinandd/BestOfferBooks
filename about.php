@@ -33,28 +33,32 @@
         <div id="main-content">
             <div id="left-content">
 				<div class="group">
-					<div id="matt">
+					<div class="about_profiles">
 						<h1>MATT</h1>
+						<img src="images/dummy_profile.png" alt="profile pic" height="60" width="60">
 						<p>
-							Matt is a cool dude
+							Matt is a cool dude. Fizzle ipsizzle dolizzle shizzle my nizzle crocodizzle nizzle, consectetizzle adipiscing elit. Nullam sapizzle velit, aliquet volutpizzle, crunk fizzle, mammasay mammasa mamma oo sa vizzle, dizzle. Pellentesque pimpin' boom shackalack. The bizzle rizzle. Uhuh ... yih! izzle mofo dapibizzle turpis tempizzle my shizz. Maurizzle pellentesque nibh izzle turpis. Gizzle izzle tortizzle. Pellentesque eleifend rhoncus dope. In ghetto fo shizzle mah nizzle fo rizzle, mah home g-dizzle platea dictumst. Fizzle fo shizzle. Curabitur hizzle urna, pretium we gonna chung, mattizzle ac, eleifend vitae, nunc. Stuff suscipizzle. Integer shiz shit sizzle black.
 						</p>
 					</div>
-					<div id="mikey">
+					<div class="about_profiles">
 						<h1>MIKEY</h1>
+						<img src="images/dummy_profile.png" alt="profile pic" height="60" width="60">
 						<p>
-							Mikey is also a cool dude
+							Mikey is also a cool dude.Fizzle ipsizzle dolizzle shizzle my nizzle crocodizzle nizzle, consectetizzle adipiscing elit. Nullam sapizzle velit, aliquet volutpizzle, crunk fizzle, mammasay mammasa mamma oo sa vizzle, dizzle. Pellentesque pimpin' boom shackalack. The bizzle rizzle. Uhuh ... yih! izzle mofo dapibizzle turpis tempizzle my shizz. Maurizzle pellentesque nibh izzle turpis. Gizzle izzle tortizzle. Pellentesque eleifend rhoncus dope. In ghetto fo shizzle mah nizzle fo rizzle, mah home g-dizzle platea dictumst. Fizzle fo shizzle. Curabitur hizzle urna, pretium we gonna chung, mattizzle ac, eleifend vitae, nunc. Stuff suscipizzle. Integer shiz shit sizzle black.
 						</p>
 					</div>
-					<div id="christian">
+					<div class="about_profiles">
 						<h1>CHRISTIAN</h1>
+						<img src="images/dummy_profile.png" alt="profile pic" height="60" width="60">
 						<p>
-							christian is another pretty cool dude
+							christian is another pretty cool dude.Fizzle ipsizzle dolizzle shizzle my nizzle crocodizzle nizzle, consectetizzle adipiscing elit. Nullam sapizzle velit, aliquet volutpizzle, crunk fizzle, mammasay mammasa mamma oo sa vizzle, dizzle. Pellentesque pimpin' boom shackalack. The bizzle rizzle. Uhuh ... yih! izzle mofo dapibizzle turpis tempizzle my shizz. Maurizzle pellentesque nibh izzle turpis. Gizzle izzle tortizzle. Pellentesque eleifend rhoncus dope. In ghetto fo shizzle mah nizzle fo rizzle, mah home g-dizzle platea dictumst. Fizzle fo shizzle. Curabitur hizzle urna, pretium we gonna chung, mattizzle ac, eleifend vitae, nunc. Stuff suscipizzle. Integer shiz shit sizzle black.
 						</p>
 					</div>
-					<div id="andrew">
+					<div class="about_profiles">
 						<h1>ANDREW</h1>
+						<img src="images/dummy_profile.png" alt="profile pic" height="60" width="60">
 						<p>
-							Andrew is alright I guess
+							Andrew is alright I guess.Fizzle ipsizzle dolizzle shizzle my nizzle crocodizzle nizzle, consectetizzle adipiscing elit. Nullam sapizzle velit, aliquet volutpizzle, crunk fizzle, mammasay mammasa mamma oo sa vizzle, dizzle. Pellentesque pimpin' boom shackalack. The bizzle rizzle. Uhuh ... yih! izzle mofo dapibizzle turpis tempizzle my shizz. Maurizzle pellentesque nibh izzle turpis. Gizzle izzle tortizzle. Pellentesque eleifend rhoncus dope. In ghetto fo shizzle mah nizzle fo rizzle, mah home g-dizzle platea dictumst. Fizzle fo shizzle. Curabitur hizzle urna, pretium we gonna chung, mattizzle ac, eleifend vitae, nunc. Stuff suscipizzle. Integer shiz shit sizzle black.
 						</p>
 					</div>
 				</div>	
