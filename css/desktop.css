@@ -151,6 +151,7 @@ nav ul li a:link {
     height: 250px;
     border: solid thin black;
     float: left;
+    overflow: scroll;
 }
 #newsfeed {
     margin: 10px 10px 10px 0;
@@ -158,6 +159,7 @@ nav ul li a:link {
     height: 250px;
     border: solid thin black;
     float: right;
+    overflow: scroll;
 }
 #featured {
     width: 878px;
@@ -184,4 +186,7 @@ nav ul li a:link {
 #right-ad h1 {
     color: white;
     text-align: center;
+}
+.box-heading {
+    margin: 0 0 0 3px;
 }

@@ -33,13 +33,57 @@
         <div id="main-content">
             <div id="left-content">
                 <div id="recent">
-                    
+                    <h2 class="box-heading" style="border-bottom: solid thin black;">Recent Listings</h2>
+                    <div class="recent-outline">
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps</h3>
+                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
+                    </div>
+                    <div class="recent-outline">
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps</h3>
+                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
+                    </div>
+                    <div class="recent-outline">
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps</h3>
+                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
+                    </div>
                 </div>
                 <div id="newsfeed">
-                    
+                    <h2 class="box-heading" style="border-bottom: solid thin black;">News</h2>
+                    <div class="recent-outline">
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps hits #1!!!</h3>
+                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
+                    </div>
+                    <div class="recent-outline">
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">TBOTD outsells Lord of the Rings</h3>
+                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
+                    </div>
+                    <div class="recent-outline" >
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">TBOTD joins Opera's club</h3>
+                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
+                    </div>
                 </div>
-                <div id="featured">
-                    
+                <div id="featured" >
+                    <h2 class="box-heading" style="border-bottom: solid thin black;">Featured</h2>
+                    <div class="recent-outline" >
+                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
+                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps will officially join the Oprah Winrey Book Club</h3>
+                        <p style="clear: both; margin-left: 100px; margin-right: 10px;">The Book that started out as the most widely-criticized book will now make a home
+                        with the Oprah Winfrey Book Club. When Derp Derpingston wrote the novel, he had no idea how much waves this book would make.
+                        The Book of the Derps is about an underdog Derp, named Derpe Derpwad that works his derpy heart out to make himself the
+                        pinacle of the Derp Dream. Believe Best Offer Books when we say this is the hardest you will ever Derp.</p>
+                        <p style="clear: both; margin-left: 100px; margin-right: 10px;">Word is that TBOTD will soon make it to the big screen and Derp Derpingston has
+                        recruited none other than Nic Cage to play the underdog Derpe Derpwad. Joining the cast will be Jack Nicholson as Derpe Derpwad's
+                        father and Meryl Streep will be cast as Derpe's Mother.</p>
+                        <p style="clear: both; margin-left: 100px; margin-right: 10px;">Best Offer Books have received a mass amount of these novels to sell in
+                        partnership with Derp Derpingston, <a href="detailtem.php">so please visit this link to make your purchases >></a></p>
+                        
+                    </div>
                 </div>
             </div>
             <div id="right-ad">

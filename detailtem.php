@@ -20,7 +20,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="">Buy</a></li>
                 <li><a href="">Sell</a></li>
                 <li><a href="">About</a></li>
@@ -40,13 +40,13 @@
 						<img src="images/example_book.jpg" alt="Example Book" height="250" width="250" />
 					</div>
 					<div class="productInfo">
-						<h1 id="bookTitle">Book Name</h1>
+						<h1 id="bookTitle">The Book of the Derps</h1>
 						<p>
-							<span id="label">Price:</span> $60<br />
+							<span id="label">Price:</span> $69<br />
 							<span id="label">ISBN:</span> 978-3-16-148410-0<br />
-							<span id="label">Condition:</span> Good<br />
+							<span id="label">Condition:</span> New<br />
 							<br />
-							<span id="label">Seller:</span> Joe Shmo<br />
+							<span id="label">Seller:</span> Best Offer Books<br />
 						</p>
 					</div>
                 </div>
