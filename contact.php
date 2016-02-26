@@ -19,12 +19,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Buy</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="detailtem.php">Buy</a></li>
                 <li><a href="">Sell</a></li>
                 <li><a href="about.php">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><div id="space"></div></li>
+                <li><a href="contact.php">Contact</a></li>
+				<li><a href="profile.html">Profile</a></li>
                 <li><form action="#"><input class="submit" type="submit" value="Log In"></form></li>
                 <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
             </ul>
