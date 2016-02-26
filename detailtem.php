@@ -51,7 +51,16 @@
 					</div>
                 </div>
 				<div id="related">
-                    <h1>Related</h1>
+                    <h1 style="border-bottom: solid thin black;">Related</h1>
+					<h2>A Placeholder</h2> 
+					<p>
+						Fusce faucibus ante ut lectus aliquet, nec pharetra quam pulvinar. Aliquam vestibulum massa volutpat dui tincidunt, vitae congue arcu vehicula.
+					</p>
+					<h2>A Paperweight</h2> 
+					<p>
+						Fusce faucibus ante ut lectus aliquet, nec pharetra quam pulvinar. Aliquam vestibulum massa volutpat dui tincidunt, vitae congue arcu vehicula.
+					</p>
+					<h2>A Capybara</h2> 
 					<p>
 						Fusce faucibus ante ut lectus aliquet, nec pharetra quam pulvinar. Aliquam vestibulum massa volutpat dui tincidunt, vitae congue arcu vehicula.
 					</p>

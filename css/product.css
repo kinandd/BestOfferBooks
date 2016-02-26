@@ -31,6 +31,11 @@
 #bookDescription p, #sellerNotes p, #related p{
 	margin: 10px;
 }
+#related h2{
+	font-weight: none;
+	font-size: 20px;
+	margin: 10px;
+}
 #sellerNotes{
 	margin: 10px;
     width: 560px;
