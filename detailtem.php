@@ -34,39 +34,17 @@
 		
 		require_once("config/db.php");
 		include_once 'includes/dbconnect.php';
-		$id = $_REQUEST['id'];
-		$result = mysqli_query($con,"SELECT title, cost, isbn, book_cond, seller_id, first, last
-						FROM books
-						JOIN users
-						ON seller_id = users.user_id
-						WHERE book_id = '" . $id . "';");
 		
-		
-		if($row = mysqli_fetch_array($result, MYSQLI_NUM))
-		{
-			// This can be enabled to make sure SQL is running when the page starts
-			?>
-			<script>alert("SQL ran successfully")</script>
-			<?php
-		}
-		else
-		{
-			?>
-			<script>alert("There was an error getting the book")</script>
-			<?php
-		}
-		/*
         if (empty($_GET['id'])) {
             echo "No book specified.";
+			exit();
         } elseif (!empty($_GET['id']) && is_numeric($_GET['id'])) {
-			
-			//$db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 			if (!$con->set_charset("utf8")) {
 				echo $con->error;
 			}
 
-			if ($con->connect_errno) {
+			if (!$con->connect_errno) {
 
 				$id = $con->real_escape_string($_GET['id']);
 
@@ -89,13 +67,15 @@
 					$last = $result_row->last;
 				} else {
 					echo "This book does not exist.";
+					exit();
 				}
 			} else {
 				echo "Database connection problem.";
 				echo $con->error;
 				echo mysqli_connect_error();
+				exit();
 			}
-		} */
+		}
 		?>
 		
         <!-- MAIN CONTENT -->
@@ -108,13 +88,13 @@
 						<img src="images/example_book.jpg" alt="Example Book" height="250" width="250" />
 					</div>
 					<div class="productInfo">
-						<h1 id="bookTitle"><?php echo $row[0]; ?></h1>
+						<h1 id="bookTitle"><?php echo $title; ?></h1>
 						<p>
-							<span id="label">Price:</span> $<?php echo $row[1]; ?><br />
-							<span id="label">ISBN:</span> <?php echo $row[2]; ?><br />
-							<span id="label">Condition:</span> <?php echo $row[3]; ?><br />
+							<span id="label">Price:</span> $<?php echo $cost; ?><br />
+							<span id="label">ISBN:</span> <?php echo $isbn; ?><br />
+							<span id="label">Condition:</span> <?php echo $book_cond; ?><br />
 							<br />
-							<span id="label">Seller:</span> <?php echo $row[5] . ' ' . $row[6]; ?><br />
+							<span id="label">Seller:</span> <?php echo $first . ' ' . $last; ?><br />
 						</p>
 					</div>
                 </div>
