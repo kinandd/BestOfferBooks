@@ -38,22 +38,22 @@
             echo "No book specified.";
         } elseif (!empty($_GET['id']) && is_numeric($_GET['id'])) {
 		
-			$this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+			db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-			if (!$this->db_connection->set_charset("utf8")) {
-				$this->errors[] = $this->db_connection->error;
+			if (!db_connection->set_charset("utf8")) {
+				echo db_connection->error;
 			}
 
-			if (!$this->db_connection->connect_errno) {
+			if (db_connection->connect_errno) {
 
-				$id = $this->db_connection->real_escape_string($_GET['id']);
+				$id = db_connection->real_escape_string($_GET['id']);
 
 				$sql = "SELECT title, cost, isbn, book_cond, seller_id, first, last
 						FROM books
 						JOIN users
 						ON seller_id = users.user_id
 						WHERE book_id = '" . $id . "';";
-				$result_of_login_check = $this->db_connection->query($sql);
+				$result_of_login_check = db_connection->query($sql);
 
 				if ($result_of_login_check->num_rows == 1) {
 
@@ -66,10 +66,10 @@
 					$first = $result_row->first;
 					$last = $result_row->last;
 				} else {
-					$this->errors[] = "This book does not exist.";
+					echo "This book does not exist.";
 				}
 			} else {
-				$this->errors[] = "Database connection problem.";
+				echo "Database connection problem.";
 			}
 		}
 		?>
