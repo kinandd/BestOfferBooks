@@ -26,13 +26,13 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
 				<li><a href="profile.html">Profile</a></li>
-                <li><form action="#"><input class="submit" type="submit" value="Log In"></form></li>
+                <li><a href="login.php">Login</a></li></li>
                 <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
             </ul>	
         </nav>
 		<?php
 		
-		require_once("config/db.php");
+		//require_once("config/db.php");
 		include_once 'includes/dbconnect.php';
 		
         if (empty($_GET['id'])) {
