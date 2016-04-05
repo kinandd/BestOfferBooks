@@ -28,32 +28,54 @@
 				<li><a href="profile.html">Profile</a></li>
                 <li><form action="#"><input class="submit" type="submit" value="Log In"></form></li>
                 <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
-            </ul>
+            </ul>	
         </nav>
 		<?php
 		
 		require_once("config/db.php");
+		include_once 'includes/dbconnect.php';
+		$id = $_REQUEST['id'];
+		$result = mysqli_query($con,"SELECT title, cost, isbn, book_cond, seller_id, first, last
+						FROM books
+						JOIN users
+						ON seller_id = users.user_id
+						WHERE book_id = '" . $id . "';");
 		
+		
+		if($row = mysqli_fetch_array($result, MYSQLI_NUM))
+		{
+			// This can be enabled to make sure SQL is running when the page starts
+			?>
+			<script>alert("SQL ran successfully")</script>
+			<?php
+		}
+		else
+		{
+			?>
+			<script>alert("There was an error getting the book")</script>
+			<?php
+		}
+		/*
         if (empty($_GET['id'])) {
             echo "No book specified.";
         } elseif (!empty($_GET['id']) && is_numeric($_GET['id'])) {
-		
-			db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+			
+			//$db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-			if (!db_connection->set_charset("utf8")) {
-				echo db_connection->error;
+			if (!$con->set_charset("utf8")) {
+				echo $con->error;
 			}
 
-			if (db_connection->connect_errno) {
+			if ($con->connect_errno) {
 
-				$id = db_connection->real_escape_string($_GET['id']);
+				$id = $con->real_escape_string($_GET['id']);
 
 				$sql = "SELECT title, cost, isbn, book_cond, seller_id, first, last
 						FROM books
 						JOIN users
 						ON seller_id = users.user_id
 						WHERE book_id = '" . $id . "';";
-				$result_of_login_check = db_connection->query($sql);
+				$result_of_login_check = $con->query($sql);
 
 				if ($result_of_login_check->num_rows == 1) {
 
@@ -70,8 +92,10 @@
 				}
 			} else {
 				echo "Database connection problem.";
+				echo $con->error;
+				echo mysqli_connect_error();
 			}
-		}
+		} */
 		?>
 		
         <!-- MAIN CONTENT -->
@@ -84,13 +108,13 @@
 						<img src="images/example_book.jpg" alt="Example Book" height="250" width="250" />
 					</div>
 					<div class="productInfo">
-						<h1 id="bookTitle"><?php echo $title; ?></h1>
+						<h1 id="bookTitle"><?php echo $row[0]; ?></h1>
 						<p>
-							<span id="label">Price:</span> $<?php echo $cost; ?><br />
-							<span id="label">ISBN:</span> <?php echo $isbn; ?><br />
-							<span id="label">Condition:</span> <?php echo $book_cond; ?><br />
+							<span id="label">Price:</span> $<?php echo $row[1]; ?><br />
+							<span id="label">ISBN:</span> <?php echo $row[2]; ?><br />
+							<span id="label">Condition:</span> <?php echo $row[3]; ?><br />
 							<br />
-							<span id="label">Seller:</span> <?php echo $first . ' ' . $last; ?><br />
+							<span id="label">Seller:</span> <?php echo $row[5] . ' ' . $row[6]; ?><br />
 						</p>
 					</div>
                 </div>

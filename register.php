@@ -10,7 +10,7 @@ if(isset($_POST['btn-signup']))
         $lname = mysqli_real_escape_string($con, $_POST['lname']);
 	$upass = md5(mysqli_real_escape_string($con, $_POST['pass']));
 	
-	if(mysqli_query($con, "INSERT INTO users(email,fname,lname,password) VALUES('$email','$fname','$lname','$upass')"))
+	if(mysqli_query($con, "INSERT INTO users(email,first,last,password) VALUES('$email','$fname','$lname','$upass')"))
 	{
 		?>
         <script>alert('You successfully registered ');</script>
@@ -22,7 +22,6 @@ if(isset($_POST['btn-signup']))
         <script>alert('There was an error while registering you...');</script>
         <?php
 	}
-	header("Location: index.php");
 }
 ?>
 <!DOCTYPE html>
