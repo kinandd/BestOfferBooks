@@ -30,6 +30,50 @@
                 <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
             </ul>
         </nav>
+		<?php
+		
+		require_once("config/db.php");
+		
+        if (empty($_GET['id'])) {
+            echo "No book specified.";
+        } elseif (!empty($_GET['id']) && is_numeric($_GET['id'])) {
+		
+			$this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+			if (!$this->db_connection->set_charset("utf8")) {
+				$this->errors[] = $this->db_connection->error;
+			}
+
+			if (!$this->db_connection->connect_errno) {
+
+				$id = $this->db_connection->real_escape_string($_GET['id']);
+
+				$sql = "SELECT title, cost, isbn, book_cond, seller_id, first, last
+						FROM books
+						JOIN users
+						ON seller_id = users.user_id
+						WHERE book_id = '" . $id . "';";
+				$result_of_login_check = $this->db_connection->query($sql);
+
+				if ($result_of_login_check->num_rows == 1) {
+
+					$result_row = $result_of_login_check->fetch_object();
+
+					$title = $result_row->title;
+					$cost = $result_row->cost;
+					$isbn = $result_row->isbn;
+					$book_cond = $result_row->book_cond;
+					$first = $result_row->first;
+					$last = $result_row->last;
+				} else {
+					$this->errors[] = "This book does not exist.";
+				}
+			} else {
+				$this->errors[] = "Database connection problem.";
+			}
+		}
+		?>
+		
         <!-- MAIN CONTENT -->
         <div id="main-content">
             <div id="left-content">
@@ -40,13 +84,13 @@
 						<img src="images/example_book.jpg" alt="Example Book" height="250" width="250" />
 					</div>
 					<div class="productInfo">
-						<h1 id="bookTitle">The Book of the Derps</h1>
+						<h1 id="bookTitle"><?php echo $title; ?></h1>
 						<p>
-							<span id="label">Price:</span> $69<br />
-							<span id="label">ISBN:</span> 978-3-16-148410-0<br />
-							<span id="label">Condition:</span> New<br />
+							<span id="label">Price:</span> $<?php echo $cost; ?><br />
+							<span id="label">ISBN:</span> <?php echo $isbn; ?><br />
+							<span id="label">Condition:</span> <?php echo $book_cond; ?><br />
 							<br />
-							<span id="label">Seller:</span> Best Offer Books<br />
+							<span id="label">Seller:</span> <?php echo $first . ' ' . $last; ?><br />
 						</p>
 					</div>
                 </div>
