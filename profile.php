@@ -1,42 +1,51 @@
-<?php
-session_start();
-
-include_once 'includes/dbconnect.php';
-
-if(!isset($_SESSION['user']))
-{
-	header("Location: login.php");
-}
-
-if(isset($_POST['btn-post-book']))
-{
-        $seller_id = $_SESSION['user'];
-        $title = mysqli_real_escape_string($con, $_POST['title']);
-        $cost = mysqli_real_escape_string($con, $_POST['cost']);
-        $isbn = mysqli_real_escape_string($con, $_POST['isbn']);
-        $condition = mysqli_real_escape_string($con, $_POST['condition']);
-	
-	if(mysqli_query($con, "INSERT INTO books(title,cost,isbn,book_cond,seller_id) VALUES('$title','$cost','$isbn','$condition','$seller_id')"))
-	{
-		?>
-        <script>alert('You successfully posted your book for sale! ');</script>
-        <?php
-	}
-	else
-	{
-		?>
-        <script>alert('There was an error while posting your book...');</script>
-        <?php
-	}
-}
-?>
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>Post a book | Best Offer Books</title>
+    <title>Best Offer Books</title>
     <link rel="stylesheet" type="text/css" href="css/desktop.css" />
-    <link rel="stylesheet" type="text/css" href="css/login.css" />
+    <style>
+        #rating
+        {
+            height: 267px;
+            width: 250px;
+            float: right;
+            text-align: center;
+        }
+        #other
+        {
+            height: 267px;
+            width: 250px;
+            float: right;
+            text-align: center;
+        }
+        #name
+        {
+            height: 267px;
+            width: 200px;
+            float: right;
+            text-align: center;
+        }
+        #bookContainer
+        {
+            
+            background-color: aliceblue;
+            width: 100%;
+            clear: both;
+            margin-top: 15px;
+            height: 350px;
+        }
+        .book
+        {
+            float: right;
+            height: 320px;
+            width: 31%;
+            border: solid 1px black;
+            margin: 7px;
+        
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -54,7 +63,7 @@ if(isset($_POST['btn-post-book']))
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="books.php">Buy</a></li>
-                <li><a href="">Sell</a></li>
+                <li><a href="post-book.php">Sell</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
 		<li><a href="profile.php">Profile</a></li>
@@ -75,33 +84,28 @@ if(isset($_POST['btn-post-book']))
         <!-- MAIN CONTENT DIV HOLDS NEWS FEED AND RECENT LISTINGS -->
         <div id="main-content">
             <div id="left-content">
-                <form class="login-form" method="post"  name="login-form">
-			<ul>
-			    <li>
-				<h2>Enter Book Details</h2>
-			    </li>
-			    <li>
-				<label for="title">Title:</label>
-				<input type="text" name="title" placeholder="Enter book title" required />
-			    </li>
-			    <li>
-				<label for="cost">Price:</label>
-				<input type="number" name="cost" placeholder="Enter price" required />
-			    </li>
-                             <li>
-				<label for="isbn">ISBN:</label>
-				<input type="text" name="isbn" placeholder="Enter the ISBN number" required />
-			    </li>
-			    <li>
-				<label for="condition">Condition:</label>
-				<input type="text" name="condition" placeholder="What condition is the book in?" required />
-			    </li>
-			    <li>
-				<button class="submit" name="btn-post-book" type="submit">Post My Book</button>
-			    </li>
-			</ul>
-		</form>
+                <img src="images/stickguy.png"/>
+                <div id="rating"><h2>User Rating:</h2><br/>
+                <span style="font-size:40px;">89%</span>
+                </div>
+                <div id="other">
+                <h2>Books Sold<br/></h2>
+                    <span style="font-size:40px;">10</span><br/>
+                    <h2>Books purchased</h2>
+                    <span style="font-size:40px;">8</span>
+                </div>
+                <div id="name">
+                <h2>Name:</h2>
+                    <br/>
+                    <span style="font-size:25px;">Mikey Hagen</span>
+                </div>
+                <div id="bookContainer">
+                    <div class="book">book</div>
+                    <div class="book">book</div>
+                    <div class="book">book</div>
+                </div>
             </div>
+            
             <div id="right-ad">
                     <h1>AD</h1>
                     <br/>

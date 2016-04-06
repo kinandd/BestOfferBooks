@@ -29,7 +29,7 @@ echo $_SESSION['user'];
                 <li><a href="post-book.php">Sell</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
-		<li><a href="profile.html">Profile</a></li>
+		<li><a href="profile.php">Profile</a></li>
                 <?php
                 
                 if(!isset($_SESSION['user']))
