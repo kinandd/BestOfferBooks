@@ -1,122 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Best Offer Books</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+  
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  padding: 5%;
+    }
+     
+     .jumbotron {
+      margin-bottom: 80px;
+    }
+   
+    footer {
+	  background-color: #f2f2f2;
+      padding: 25px;
+    }
+	
+	li a {
+		font-size: 30pt;
+		margin-top: 30px;
+	}
+	
+	img{
+		margin-right: 50px;
+	}
+	
+	.carousel-inner{
+		width: 100%;
+		height: 350px;
+	}
+	
+	@media (max-width: 1300px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+	.navbar-collapse.collapse.in { display: block!important; }
+}
+  </style>
+</head>
+<body>
+
 <?php
-session_start();
-echo $_SESSION['user'];
+include_once('header.php');
 ?>
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title>Best Offer Books</title>
-    <link rel="stylesheet" type="text/css" href="css/desktop.css" />
-</head>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Welcome to Best Offer Books!</h1>      
+    <p>We are the top site for trading, selling, and buying textbooks!</p>
+  </div>
+</div>
 
-<body>
-    <!-- DESKTOP WRAPPER BEGIN -->
-    <div id="wrapper">
-        <div id="header-images">
-            <div id="header-left">
-                <a href="index.php"><img src="images/bestofferbookslogo.png" width="225" height="113" alt="Best Offer Books logo"></a>
-            </div>
-            <div id="header-right">
-                <img src="images/ad.png" width="728" height="90" alt="ad">
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="books.php">Buy</a></li>
-                <li><a href="post-book.php">Sell</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
-		<li><a href="profile.php">Profile</a></li>
-                <?php
-                
-                if(!isset($_SESSION['user']))
-                {
-                     echo "<li><a href='login.php'>Login</a></li></li>";                       
-                }
-                else
-                {
-                    echo "<li><a href='logout.php?logout'>Log out</a></li></li>";
-                }
-                ?>
-                <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
-            </ul>
-        </nav>
-        <!-- MAIN CONTENT DIV HOLDS NEWS FEED AND RECENT LISTINGS -->
-        <div id="main-content">
-            <div id="left-content">
-                <div id="recent">
-                    <h2 class="box-heading" style="border-bottom: solid thin black;">Recent Listings</h2>
-                    <div class="recent-outline">
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps</h3>
-                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
-                    </div>
-                    <div class="recent-outline">
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps</h3>
-                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
-                    </div>
-                    <div class="recent-outline">
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps</h3>
-                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
-                    </div>
-                </div>
-                <div id="newsfeed">
-                    <h2 class="box-heading" style="border-bottom: solid thin black;">News</h2>
-                    <div class="recent-outline">
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps hits #1!!!</h3>
-                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
-                    </div>
-                    <div class="recent-outline">
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">TBOTD outsells Lord of the Rings</h3>
-                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
-                    </div>
-                    <div class="recent-outline" >
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">TBOTD joins Opera's club</h3>
-                        <p style="clear: both; margin-left: 100px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien dolor, et viverra tellus mollis in. Duis ullamcorper ultrices eleifend.</p>
-                    </div>
-                </div>
-                <div id="featured" >
-                    <h2 class="box-heading" style="border-bottom: solid thin black;">Featured</h2>
-                    <div class="recent-outline" >
-                        <img src="images/example_book.jpg" width="50" height="50" style="margin-left: 20px; float: left;"/>
-                        <h3 style="float: left; margin: 5px 0 0 28px;">The Book of the Derps will officially join the Oprah Winrey Book Club</h3>
-                        <p style="clear: both; margin-left: 100px; margin-right: 10px;">The Book that started out as the most widely-criticized book will now make a home
-                        with the Oprah Winfrey Book Club. When Derp Derpingston wrote the novel, he had no idea how much waves this book would make.
-                        The Book of the Derps is about an underdog Derp, named Derpe Derpwad that works his derpy heart out to make himself the
-                        pinacle of the Derp Dream. Believe Best Offer Books when we say this is the hardest you will ever Derp.</p>
-                        <p style="clear: both; margin-left: 100px; margin-right: 10px;">Word is that TBOTD will soon make it to the big screen and Derp Derpingston has
-                        recruited none other than Nic Cage to play the underdog Derpe Derpwad. Joining the cast will be Jack Nicholson as Derpe Derpwad's
-                        father and Meryl Streep will be cast as Derpe's Mother.</p>
-                        <p style="clear: both; margin-left: 100px; margin-right: 10px;">Best Offer Books have received a mass amount of these novels to sell in
-                        partnership with Derp Derpingston, <a href="detailtem.php">so please visit this link to make your purchases >></a></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div id="right-ad">
-                    <h1>AD</h1>
-                    <br/>
-                    <h1>AD</h1>
-                    <br/>
-                    <h1>AD</h1>
-                    <br/>
-                    <h1>AD</h1>
-                    <br/>
-                    <h1>AD</h1>
-                    <br/>
-                    <h1>AD</h1>
-            </div>
-        </div>
-        
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Programming Books</div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="" alt="Cha">
+			</div>
+
+			<div class="item">
+			  <img src="l" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+        <div class="panel-footer">The top textbooks for learning programming</div>
+      </div>
     </div>
-    <!-- DESKTOP WRAPPER ENDS -->
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">History Textbooks</div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="" alt="Cha">
+			</div>
+
+			<div class="item">
+			  <img src="l" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+        <div class="panel-footer">Textbooks for history majors</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Design Textbooks</div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="" alt="Cha">
+			</div>
+
+			<div class="item">
+			  <img src="l" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+        <div class="panel-footer">Textbooks for deisgn students</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Humanities Textbooks</div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="" alt="Cha">
+			</div>
+
+			<div class="item">
+			  <img src="l" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+        <div class="panel-footer">Textbooks for those humanities classes you are required to take at your school</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Communications Textbooks</div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="" alt="Cha">
+			</div>
+
+			<div class="item">
+			  <img src="l" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+        <div class="panel-footer">Communications textbooks for cheap because you will probably only open them twice</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Assorted Fiction</div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="" alt="Cha">
+			</div>
+
+			<div class="item">
+			  <img src="l" alt="Chania">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+
+			<div class="item">
+			  <img src="" alt="Flower">
+			</div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+        <div class="panel-footer">Books to read to rela when you are done not reading your textbooks</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <p>Online Store Copyright</p>  
+  <form class="form-inline">Get deals:
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-danger">Sign Up</button>
+  </form>
+</footer>
+
 </body>
 </html>
