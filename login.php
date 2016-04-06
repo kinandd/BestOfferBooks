@@ -52,7 +52,7 @@ if(isset($_POST['btn-login']))
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="detailtem.php">Buy</a></li>
+                <li><a href="books.php">Buy</a></li>
                 <li><a href="post-book.php">Sell</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>

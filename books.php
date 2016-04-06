@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="detailtem.php">Buy</a></li>
+                <li><a href="books.php">Buy</a></li>
                 <li><a href="post-book.php">Sell</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
@@ -55,7 +55,7 @@
 					{
 						$id=$test['book_id'];
 						echo "<tr>";
-						echo "<td> <a href ='detailitem.php?ID=$id'>".$test['title']."</a></td>";
+						echo "<td> <a href ='detailtem.php?id=$id'>".$test['title']."</a></td>";
 						echo "<td>$". $test['cost']. "</td>";
 
 						

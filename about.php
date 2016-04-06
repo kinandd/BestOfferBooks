@@ -20,12 +20,22 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="detailtem.php">Buy</a></li>
-                <li><a href="">Sell</a></li>
+                <li><a href="books.php">Buy</a></li>
+                <li><a href="post-book.php">Sell</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
-				<li><a href="profile.html">Profile</a></li>
-                <li><form action="#"><input class="submit" type="submit" value="Log In"></form></li>
+		<li><a href="profile.html">Profile</a></li>
+                <?php
+                
+                if(!isset($_SESSION['user']))
+                {
+                     echo "<li><a href='login.php'>Login</a></li></li>";                       
+                }
+                else
+                {
+                    echo "<li><a href='logout.php?logout'>Log out</a></li></li>";
+                }
+                ?>
                 <li><input class="search-box" type="text" name="search" placeholder="Search..."></li>
             </ul>
         </nav>
