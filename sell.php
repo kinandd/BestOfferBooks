@@ -124,7 +124,7 @@ include_once('header.php');
 			<label for="title">Title:</label>
 			<input type="text" name="title" class="form-control" placeholder="Enter the Title" required />
 			<label for="price">Price:</label>
-			<input type="number" name="price" class="form-control" placeholder="Enter the Price" required />
+			<input type="number" name="cost" class="form-control" placeholder="Enter the Price" required />
 			<label for="isbn">ISBN:</label>
 			<input type="text" name="isbn" class="form-control" placeholder="Enter the ISBN" required />
 			<label for="condition">Condition:</label>
