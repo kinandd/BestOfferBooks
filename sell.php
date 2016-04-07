@@ -120,7 +120,7 @@ include_once('header.php');
 <div class="container">
 
 		  <form class="form-signin" method="post">
-			<h2 class="form-signin-heading">Enter Your Books Information</h2><br><br><br>
+			<h2 class="form-signin-heading">Enter Your Book's Information</h2><br><br><br>
 			<label for="title">Title:</label>
 			<input type="text" name="title" class="form-control" placeholder="Enter the Title" required />
 			<label for="price">Price:</label>
