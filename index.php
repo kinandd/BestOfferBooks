@@ -91,7 +91,8 @@ include_once('header.php');
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Welcome to Best Offer Books!</h1>      
-    <p>We are the top site for trading, selling, and buying textbooks!</p>
+    <p>We are your number one source for trading, selling, and buying textbooks!</p>
+    <p>You <i>won't</i> find textbooks anywhere else for this cheap!</p>
   </div>
 </div>
 
