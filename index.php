@@ -112,19 +112,19 @@ include_once('header.php');
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img src="" alt="Cha">
+			  <img src="img/alice.jpg" alt="Death">
 			</div>
 
 			<div class="item">
-			  <img src="l" alt="Chania">
+			  <img src="img/python.jpg" alt="Chania">
 			</div>
 
 			<div class="item">
-			  <img src="" alt="Flower">
+			  <img src="img/java.jpg" alt="Flower">
 			</div>
 
 			<div class="item">
-			  <img src="" alt="Flower">
+			  <img src="img/prog_fund.jpg" alt="Flower">
 			</div>
 		  </div>
 
@@ -143,7 +143,7 @@ include_once('header.php');
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">History Textbooks</div>
+        <div class="panel-heading">Database Textbooks</div>
         <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="false">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
@@ -156,11 +156,11 @@ include_once('header.php');
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img src="" alt="Cha">
+			  <img src="img/database1.jpg" alt="Cha">
 			</div>
 
 			<div class="item">
-			  <img src="l" alt="Chania">
+			  <img src="img/database2.jpg" alt="Chania">
 			</div>
 
 			<div class="item">
@@ -182,7 +182,7 @@ include_once('header.php');
 			<span class="sr-only">Next</span>
 		  </a>
 		</div>
-        <div class="panel-footer">Textbooks for history majors</div>
+        <div class="panel-footer">Textbooks for students who want to learn about databases</div>
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -200,11 +200,11 @@ include_once('header.php');
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img src="" alt="Cha">
+			  <img src="img/color.jpg" alt="Cha">
 			</div>
 
 			<div class="item">
-			  <img src="l" alt="Chania">
+			  <img src="img/design.jpg" alt="Chania">
 			</div>
 
 			<div class="item">
@@ -249,11 +249,11 @@ include_once('header.php');
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img src="" alt="Cha">
+			  <img src="img/world_rel.jpg" alt="Cha">
 			</div>
 
 			<div class="item">
-			  <img src="l" alt="Chania">
+			  <img src="" alt="Chania">
 			</div>
 
 			<div class="item">
@@ -293,7 +293,7 @@ include_once('header.php');
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img src="" alt="Cha">
+			  <img src="img/comm.jpg" alt="Cha">
 			</div>
 
 			<div class="item">
@@ -337,7 +337,7 @@ include_once('header.php');
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 			<div class="item active">
-			  <img src="" alt="Cha">
+			  <img src="img/watchmen.jpg" alt="Cha">
 			</div>
 
 			<div class="item">
