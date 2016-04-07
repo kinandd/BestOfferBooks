@@ -2,29 +2,23 @@
 session_start();
 include_once 'includes/dbconnect.php';
 
-if(isset($_POST['btn-login']))
+if(isset($_POST['btn-signup']))
 {
-	$email = mysqli_real_escape_string($con,$_POST['email']);
-	$upass = mysqli_real_escape_string($con,$_POST['pass']);
-	$res = mysqli_query($con,"SELECT * FROM users WHERE email='$email'");
-	$row = mysqli_fetch_array($res);
-	if (!$res)
+	$email = mysqli_real_escape_string($con, $_POST['email']);
+        $fname = mysqli_real_escape_string($con, $_POST['fname']);
+        $lname = mysqli_real_escape_string($con, $_POST['lname']);
+	$upass = md5(mysqli_real_escape_string($con, $_POST['pass']));
+	
+	if(mysqli_query($con, "INSERT INTO users(email,first,last,password) VALUES('$email','$fname','$lname','$upass')"))
 	{
-		printf("Error: %s\n", mysqli_error($con));
-		exit();
-	}
-        if($row['password']==md5($upass))
-	{
-		$_SESSION['user'] = $row['user_id'];
-                ?>
-        <script>alert('Login successful');</script>
+		?>
+        <script>alert('You successfully registered ');</script>
         <?php
-            header("Location: index.php");
 	}
 	else
 	{
 		?>
-        <script>alert('wrong details');</script>
+        <script>alert('There was an error while registering you...');</script>
         <?php
 	}
 }
@@ -118,7 +112,7 @@ include_once('header.php');
 
 		<div class="container">
 
-		  <form class="form-signin">
+		  <form class="form-signin" method="post">
 			<h2 class="form-signin-heading">Please Register</h2><br><br><br>
 			<label for="email">Email:</label>
 			<input type="email" name="email" class="form-control" placeholder="Your email" required />

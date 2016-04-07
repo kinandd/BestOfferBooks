@@ -74,8 +74,26 @@
     .collapsing {
         overflow: hidden!important;
     }
-	.navbar-collapse.collapse.in { display: block!important; }
-}
+    .navbar-collapse.collapse.in { display: block!important; }
+    }
+    table {
+      margin-top: 50px;
+      border: solid thin black;
+    }
+    table th {
+      background-color: #d3d3d3;
+      font-size: 1.2em;
+      text-align: center;
+      border: solid thin black;
+    }
+    table tr,td {
+      border: solid thin black;
+    }
+    table td {
+      padding: 10px;
+      width: 200px;
+    }
+    
   </style>
 </head>
 <body>
@@ -84,29 +102,27 @@
 include_once('header.php');
 ?>
 <div id="container">
-				<?php
-		
-				//require_once("config/db.php");
-				include_once 'includes/dbconnect.php';
-				
-				
+    <?php
 
-						$result = mysqli_query($con,"SELECT * FROM books ORDER by book_id");
-							echo "<table>";
-							while($test = mysqli_fetch_array($result))
-							{
-								$id=$test['book_id'];
-								echo "<tr>";
-								echo "<td> <a href ='detailtem.php?id=$id'>".$test['title']."</a></td>";
-								echo "<td>$". $test['cost']. "</td>";
+    //require_once("config/db.php");
+    include_once 'includes/dbconnect.php';
+      $result = mysqli_query($con,"SELECT * FROM books ORDER by book_id");
+	      echo "<table align='center'>";
+	      echo "<th>Book title</th>";
+	      echo "<th>Book price</th>";
+	      echo "<th>Book condition</th>";
+	      while($test = mysqli_fetch_array($result))
+	      {
+		      $id=$test['book_id'];
+		      echo "<tr>";
+		      echo "<td> <a href ='detailtem.php?id=$id'>".$test['title']."</a></td>";
+		      echo "<td>$". $test['cost']. "</td>";
+		      echo "<td>". strtoupper($test['book_cond']). "</td>";
+		      echo "</tr>";
 
-								
-								echo "</tr>";
-
-							}
-							echo "</table>";
-					
-				?>
+	      }
+	      echo "</table>";    
+    ?>
 </div>
 </body>
 </html>

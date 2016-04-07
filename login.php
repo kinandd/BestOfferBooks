@@ -117,11 +117,11 @@ include_once('header.php');
 
 <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" method="post">
         <h2 class="form-signin-heading">Please sign in</h2><br><br><br>
         <label for="inputEmail" class="sr-only">Username</label>
         <input type="text" name="email" class="form-control" placeholder="Your username" required /><br><br><br>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required><br><br><br>
+        <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required><br><br><br>
         
         <button class="btn btn-lg btn-primary btn-block" name="btn-login" type="submit">Sign in</button>
       </form>

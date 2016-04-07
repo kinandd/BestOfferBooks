@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -21,7 +24,17 @@
 	   
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+	<?php
+                
+                if(!isset($_SESSION['user']))
+                {
+                     echo "<li><a href='login.php'><span class='glyphicon glyphicon-user'></span> Login</a></li>";                       
+                }
+                else
+                {
+		    echo "<li><a href='logout.php?logout'><span class='glyphicon glyphicon-user'></span> Log out</a></li>";  
+                }
+        ?>
         <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
 	  
