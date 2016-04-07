@@ -13,17 +13,18 @@
 	 
 	  
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Buy</a></li>
-        <li><a href="#">Sell</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="buy.php">Buy</a></li>
+        <li><a href="sell.php">Sell</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
 	   
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+        <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
+	  
     </div>
   </div>
 </nav>
